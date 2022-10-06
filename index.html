@@ -1,0 +1,932 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,  initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.7.20/c3.min.css" integrity="sha512-cznfNokevSG7QPA5dZepud8taylLdvgr0lDqw/FEZIhluFsSwyvS81CMnRdrNSKwbsmc43LtRd2/WMQV+Z85AQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+    <!-- Load d3.js and c3.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.16.0/d3.min.js" integrity="sha512-FHsFVKQ/T1KWJDGSbrUhTJyS1ph3eRrxI228ND0EGaEp6v4a/vGwPWd3Dtd/+9cI7ccofZvl/wulICEurHN1pg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.7.20/c3.min.js" integrity="sha512-+IpCthlNahOuERYUSnKFjzjdKXIbJ/7Dd6xvUp+7bEw0Jp2dg6tluyxLs+zq9BMzZgrLv8886T4cBSqnKiVgUw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title> Home page</title>
+    </head>
+  <body>
+      <!-- navbar started here -->
+      <header class="w-100">
+        <nav class="navbar navbar-expand-lg navbar-light ">
+            <a class="nav-link text-center text-dark" href="#" id="sidebar"><i class="fas fa-stream"></i><span class="sr-only">(current)</span></a>
+            <a class="navbar-brand ml-lg-5 mr-auto" href="#"><span>H</span>ighnous</a>
+            <div class="text-center out"><ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link text-center mt-1" id="notif" href="#"><i class="far fa-bell"></i><span class="text-light bg-danger"></span></a>
+              </li>
+              <li class="nav-item active">
+                  <a class="nav-link text-center mt-1" id="language" href="#"><i class="fas fa-globe"></i></a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link text-center mt-1" id="setting" href="#"><i class="fas fa-cog"></i></a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link text-center  text-secondary" id="profile" href="#"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8Y2hhcmFjdGVyfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=50&q=50" height="35px" width="35px" style="border-radius: 50%;"><span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link text-center mt-1 text-secondary pl-3" id="bars" style="border-left: 1px solid gray;" href="#"><i class="fas fa-bars"></i></a>
+                </li>
+              </ul></div>
+           
+              <div class="input-group" id="input-group">
+                <div class="input-group-prepend">
+                  <button class="btn text-secondary" type="button"><i class="fas fa-search fa-1x"></i></button>
+                </div>
+                <input type="text" class="border-0 outline-0 px-lg-5 " placeholder="Search..." aria-label="" aria-describedby="basic-addon1">
+              </div>
+           
+              <div class="out2">
+              <ul class="navbar-nav ml-auto">
+               
+                <li class="nav-item active">
+                  <a class="nav-link text-center mr-5 mt-2 text-secondary" id="notif2" href="#"><i class="far fa-bell"></i><span class="bg-danger text-light"></span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link text-center mr-5 mt-1 text-secondary" id="language2" href="#"><i class="fas fa-globe"></i></a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link text-center mr-5 mt-1 text-secondary" id="setting2" href="#"><i class="fas fa-cog"></i></a>
+                
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link text-center mr-5 text-secondary" id="profile2" href="#"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8Y2hhcmFjdGVyfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=50&q=50" height="35px" width="35px" style="border-radius: 50%;"><span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link text-center mr-3 mt-1 text-secondary pl-3" style="border-left: 1px solid gray;" href="#" id="bars2"><i class="fas fa-bars"></i></a>
+                  </li>
+                </ul>
+              </div>
+             
+          </nav>
+          <nav class="navbar navbar-expand-lg navbar-light" id="secend-nav">
+            
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        
+        
+          <div class="collapse navbar-collapse w-100" id="navbarSupportedContent">
+            
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                  <a class="nav-link text-center a" href="#">Dashboard <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link text-center a" href="#">Customers <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link text-center a" href="#">Contracts <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link text-center a" id="floor" href="#">Floor drawing</a>
+                  <!-- floor body started here -->
+           <div class="floor shadow">
+              <div class="d-flex flex-column justify-content-between ">
+               <a href="#">Floor drawing</a>
+                  <small class="mt-2" style="border-top: 1px solid  #e8e8e8;"><span class="shadow ">$</span> list of rooms</small>
+                   <small class="mt-2"><span class="shadow ">$</span> floor maps</small>
+                   <small class="mt-2"><span class="shadow ">$</span> Sub item 3</small>
+                   <small class="mt-2"><span class="shadow ">$</span> Sub item 4</small>
+                   <small class="mt-2"><span class="shadow ">$</span> Sub item 5</small>
+               </div>
+           </div>
+      <!-- floor body endedhere -->
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link text-center a" href="#">Meeting Rooms <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link text-center a" id="invoice" href="#">Invoice/Debdts <span class="sr-only">(current)</span></a>
+                      <!-- invoice body started here -->
+      <div class="invoice shadow">
+        <div class="d-flex flex-column justify-content-between ">
+          <a href="#">Invoice/Debets</a>
+          <small class="mt-2" style="border-top: 1px solid  #e8e8e8;"><span class="shadow">$</span> invoice</small>
+          <small class="mt-2"><span class="shadow">$</span> One-off debts</small>
+          <small class="mt-2"><span class="shadow">$</span> Sub item 3</small>
+          <small class="mt-2"><span class="shadow">$</span> Sub item 4</small>
+          <small class="mt-2"><span class="shadow">$</span> Sub item 5</small>
+        </div>
+
+      </div>
+      <!-- invoice body endedhere -->
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link text-center a" href="#">Opertions<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link text-center a" href="#">Reports <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link text-center a" href="#">POS <span class="sr-only">(current)</span></a>
+                </li>                
+            </ul>
+          
+          </div>
+        </nav>
+      </header>
+      <!-- navbar ended here -->
+      <!-- main content -->
+      <main class="w-100">
+       <div class="wholepage">
+            <!-- tabs started here -->
+            <div class="pb-2" >
+              <div class="text-center" id="tabs">
+              <div class="d-flex flex-row justify-content-between flex-wrap" >  
+               <a class="text-decoration-none p-2 " href="#" id="tab1">Main Dashboard</a>
+               <a class="text-decoration-none p-2 " href="#" id="tab2">Sales Dashboard</a>
+               <a class="text-decoration-none p-2 " href="#" id="tab3">offers</a>
+               <a class="text-decoration-none p-2 " href="#" id="tab4">Activites</a>
+               <a class="text-decoration-none p-2 " href="#" id="tab5">To Do</a>
+               <a class="text-decoration-none p-2 " href="#" id="tab6">Tickets</a>
+               <a class="text-decoration-none p-2 " href="#" id="tab7">Signage</a>
+               <a class="text-decoration-none p-2 " href="#" id="tab8">Billing Summery</a>
+               </div>
+              </div>
+            </div>
+            <!-- tabs ended here -->
+      
+        <!-- first tab content (main dashboard)started here -->
+        <div class="content">
+        
+            <div class="d-flex flex-row flex-wrap justify-content-around">
+                <div class="rounded shadow d-flex flex-row justify-content-around" id="box">
+                    <!-- <i class="far fa-heart mt-3 text-primary p-4" 
+                    style="background-color: rgba(40,146,253,.25);border-radius: 50%;"></i>  -->
+                    <div class="d-flex flex-column">
+                      <small class="text-dark mt-1">New Clients</small>
+                      <h4 class="text-dark mt-1" id="nbr"><span class="count">555</span>k clients</h4>
+                      <small class="text-info mt-1">from last month</small>
+                    </div>
+                    
+                      <div class="circle-container">
+                        <div class="circle">
+                          <div class="item layer-1">
+                            <div class="fill"></div>
+                          </div>
+                          <div class="item layer-2">
+                            <div class="fill"></div>
+                          </div>
+                          <div class="inside-content">64%</div>
+                        </div>
+                      </div>
+                  
+                  
+                </div>
+                <div class="rounded shadow d-flex flex-row justify-content-around" id="box2">
+                  <div class="d-flex flex-column">
+                    <small class="text-dark mt-1">Total sales</small>
+                    <h4 class="text-dark mt-1" id="nbr"><span class="count">9980.90</span>$</h4>
+                    <small class="text-danger mt-1">from last month</small>
+                  </div>
+                  <div class="circle-container2">
+                    <div class="circle">
+                      <div class="item layer-1">
+                        <div class="fill"></div>
+                      </div>
+                      <div class="item layer-2">
+                        <div class="fill"></div>
+                      </div>
+                      <div class="inside-content">50%</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="rounded shadow d-flex flex-row justify-content-around" id="box3">
+                  <div class="d-flex flex-column">
+                    <small class="text-dark mt-1">Total profite</small>
+                    <h4 class="text-dark mt-1" id="nbr"><span class="count">88899</span>$</h4>
+                    <small class="text-warning mt-1">from last month</small>
+                  </div>
+                  <div class="circle-container3">
+                    <div class="circle">
+                      <div class="item layer-1">
+                        <div class="fill"></div>
+                      </div>
+                      <div class="item layer-2">
+                        <div class="fill"></div>
+                      </div>
+                      <div class="inside-content">33%</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="rounded shadow d-flex flex-row justify-content-around" id="box4">
+                  <div class="d-flex flex-column">
+                    <small class="text-dark mt-1">New Invoic</small>
+                    <h4 class="text-dark mt-1" id="nbr"><span class="count">1805</span>$</h4>
+                    <small class="text-success mt-1">from last month</small>
+                  </div>
+                  <div class="circle-container4">
+                    <div class="circle">
+                      <div class="item layer-1">
+                        <div class="fill"></div>
+                      </div>
+                      <div class="item layer-2">
+                        <div class="fill"></div>
+                      </div>
+                      <div class="inside-content">70%</div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="container">
+            <div class="d-flex flex-row flex-wrap justify-content-around">
+                <div class="rounded shadow text-center animate__animated animate__shakeX" id="box6">
+                    <i class="fas fa-shopping-cart mt-3 text-success p-4" style="background-color: rgba(90,208,146,.25);border-radius: 50%;"></i> 
+                        <h5 class="mt-3 text-danger">New Orders</h5>
+                        <P class="text-secondary my-3" id="nbr"><span class="count mr-1">600006</span><i class="fas fa-chart-line text-success"></i></P>
+                </div>
+                <div class="rounded shadow" id="box5" >
+                    <div id="chart"></div>
+                 </div>
+           </div>
+           <div class="d-flex flex-row flex-wrap justify-content-around">
+            <div class="rounded shadow text-center " id="box7">
+               <p class="border border-secondary"> <h5 class="text-info">MY TASKS</h5><span class="text-secondary">31/8/2021</span></p>
+               <div class="task"> <input type="checkbox" class="text-left"/><span class="text-dark text-left ml-2">Create the UI design for mobile.</span><span class="text-right badge badge-danger d-inline ml-2">Today</span></div>
+               <div class="task"> <input type="checkbox" class="text-left"/><span class="text-dark text-left ml-2">Check the new API standards.</span><span class="text-right badge badge-danger d-inline ml-2">Monday</span></div>
+               <div class="task"> <input type="checkbox" class="text-left"/><span class="text-dark text-left ml-2">Check the new mockup ABC.</span><span class="text-right badge badge-danger d-inline ml-2">wendsday</span></div>
+               <div class="task"> <input type="checkbox" class="text-left"/><span class="text-dark text-left ml-2">Check fetching the APIs.</span><span class="text-right badge badge-danger d-inline ml-2">Sunday</span></div>
+            </div>
+            <div class="rounded shadow" id="box5" >
+              <div>
+              <canvas id="myChart"></canvas>
+            </div>
+                <!-- <div id="mychart"></div> -->
+             </div>
+       </div>
+       <section class="mt-3">
+        <div class="row">
+            <div class="ftable table-responsive mt-5 col-md-12 rounded shadow">
+              <h4 class="text-left mt-3">Statistics table</h4>
+               <table class="table table-hover">
+                   <thead>
+                     <tr>
+                       <th>#</th>
+                       <th> Name</th>
+                       <th>company</th>
+                       <th>start Date</th>
+                       <th>status</th>
+                       <th>Amount</th>
+                       <th>Action</th>
+                     </tr>
+                   </thead>
+                   <tbody>
+                     <tr class="table-active">
+                       <th scope="row">1</th>
+                       <td>Mark Jacob</td>
+                       <td>ABC Fintech LTD</td>
+                       <td>Jan 1,2019</td>
+                       <td class="text-danger">Close</td>
+                       <td>	$ 1000.00</td>
+                       <td class="text-danger">X</td>
+                     </tr>
+                     <tr>
+                       <th scope="row">2</th>
+                       <td>Otto Thornton</td>
+                       <td>ACME Pvt LTD</td>
+                       <td>Jan 1,2019</td>
+                       <td class="text-success">Open</td>
+                       <td>$ 3000.00</td>
+                       <td class="text-danger">X</td>
+                     </tr>
+                     <tr class="table-active">
+                        <th scope="row">3</th>
+                        <td>Iris Yilmaz</td>
+                        <td>Collboy Tech LTD</td>
+                        <td>Jan 1,2019</td>
+                        <td class="text-success">Open</td>
+                        <td>$ 2000.00</td>
+                        <td class="text-danger">X</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">4</th>
+                        <td>Lidia Livescu</td>
+                        <td>My Fintech LTD</td>
+                        <td>Jan 1,2019</td>
+                        <td class="text-danger">Close</td>
+                        <td>$ 5000.00</td>
+                        <td class="text-danger">X</td>
+                      </tr>
+                   </tbody>
+                 </table>
+                
+                  
+            </div>
+            <div class="stable table-responsive mt-5 col-md-12 rounded shadow">
+               <table class="table">
+                   <thead>
+                     <tr>
+                       <th>1</th>
+                       <td>AEC Company</td>
+                       <td>Web App</td>
+                       <td class="bg-info text-light text-center">Development</td>
+                     </tr>
+                   </thead>
+                   <tbody>
+                     <tr class="table-success">
+                       <th scope="row">2</th>
+                       <td>Mobile App for socail</td>
+                       <td>iScoial App</td>
+                       <td class="bg-danger text-light text-center">UI/UX</td>
+                     </tr>
+                     <tr>
+                       <th scope="row">3</th>
+                       <td>Website</td>
+                       <td>MediTab</td>
+                       <td class="text-light bg-success text-center">Marketing</td>
+                     </tr>
+                     <tr>
+                        <th scope="row">4</th>
+                        <td>Adword campagin</td>
+                        <td>True Line</td>
+                        <td class="text-light bg-warning text-center">SEO</td>
+                      </tr>
+                   </tbody>
+                 </table>
+            </div>
+        </div>
+      </section>
+        
+         </div>
+        </div>
+        <!-- secend tab sales dashboard started here -->
+        <div class="content2  rounded mt-3">
+          <div class="d-flex flex-row justify-content-between flex-wrap w-100">
+            <div class="shadow rounded d-flex flex-row justify-content-between p-3 mb-5" style="width: 230px;">
+              <p class="d-flex flex-column justify-content-between">
+              <strong style="color:#2c9bf3 ;">Won prospect</strong>
+                <small class="text-dark">300 000 sek</small>
+              </p>
+              <i class="fas fa-chart-line fa-2x ml-2 mt-2" style="color:#2c9bf3 ;"></i>
+            </div>
+            <div class="shadow rounded d-flex flex-row justify-content-between p-3 mb-5" style="width: 230px;">
+              <p class="d-flex flex-column justify-content-between">
+              <strong style="color:#2c9bf3 ;">prospect 1(90%)</strong>
+                <small class="text-dark">500 000 sek</small>
+              </p>
+              <i class="fas fa-chart-line fa-2x ml-2 mt-2" style="color:#2c9bf3 ;"></i>
+            </div>
+            <div class="shadow rounded d-flex flex-row justify-content-between p-3 mb-5" style="width: 230px;">
+              <p class="d-flex flex-column justify-content-between">
+              <strong style="color:#2c9bf3 ;">prospect 1(70%)</strong>
+                <small class="text-dark">600 000 sek</small>
+              </p>
+              <i class="fas fa-chart-line fa-2x ml-2 mt-2" style="color:#2c9bf3 ;"></i>
+            </div>
+            <div class="shadow rounded d-flex flex-row justify-content-between p-3 mb-5" style="width: 230px;">
+              <p class="d-flex flex-column justify-content-between">
+              <strong style="color:#2c9bf3 ;">prospect 1(50%)</strong>
+                <small class="text-dark">300 000 sek</small>
+              </p>
+              <i class="fas fa-chart-line fa-2x ml-2 mt-2" style="color:#2c9bf3 ;"></i>
+            </div>
+            <div class="shadow rounded d-flex flex-row justify-content-between p-3 mb-5" style="width: 230px;">
+              <p class="d-flex flex-column justify-content-between">
+              <strong style="color:#2c9bf3 ;">telephon/mail contact</strong>
+                <small class="text-dark">300 000 sek</small>
+              </p>
+              <i class="fas fa-chart-line fa-2x ml-2 mt-2" style="color:#2c9bf3 ;"></i>
+            </div>
+          </div>
+          <div class="d-flex flex-row justify-content-between flex-wrap w-100">
+            <div class="shadow rounded d-flex flex-row justify-content-between p-3 mb-5" style="width: 230px;height: 230px;background-color: #EFF9FF;">
+              <div class="d-flex flex-column justify-content-between">
+              <div data-toggle="tooltip"
+              data-placement="left" title="* Edited by Sarah moil : 5-9-2021 (add new content person sam Davidson."><img src="https://images.unsplash.com/photo-1554151228-14d9def656e4?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8cGVyc29ufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" height="50px" width="50px" style="border-radius: 50%;"/></div>
+                <div><small>Hassan busniss 300000 sek</small></div>
+                <div><small class="font-weight-light">Hassan busniss</small></div>
+              </div>
+              <div class="d-flex flex-column justify-content-betwen text-right">
+              <div><i class="fas fa-trash" style="color:#2c9bf3 ;"></i></div>
+              <div style="margin-top: 120px;"><small class="text-secondary ">sun march 2021 18.09pm</small></div>
+            </div>
+            </div>
+            <div class="shadow rounded d-flex flex-row justify-content-between p-3 mb-5" style="width: 230px;height: 230px;background-color: #EFF9FF;">
+              <div class="d-flex flex-column justify-content-between">
+              <div data-toggle="tooltip"
+              data-placement="left" title="* Edited by Sarah moil : 5-9-2021 (add new content person sam Davidson."><img src="https://images.unsplash.com/photo-1554151228-14d9def656e4?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8cGVyc29ufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" height="50px" width="50px" style="border-radius: 50%;"/></div>
+                <div><small>Hassan busniss 300000 sek</small></div>
+                <div><small class="font-weight-light">Hassan busniss</small></div>
+              </div>
+              <div class="d-flex flex-column justify-content-betwen text-right">
+              <div><i class="fas fa-trash" style="color:#2c9bf3 ;"></i></div>
+              <div style="margin-top: 120px;"><small class="text-secondary ">sun march 2021 18.09pm</small></div>
+            </div>
+            </div>
+            <div class="shadow rounded d-flex flex-row justify-content-between p-3 mb-5" style="width: 230px;height: 230px;background-color: #EFF9FF;">
+              <div class="d-flex flex-column justify-content-between">
+              <div data-toggle="tooltip"
+              data-placement="left" title="* Edited by Sarah moil : 5-9-2021 (add new content person sam Davidson."><img src="https://images.unsplash.com/photo-1554151228-14d9def656e4?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8cGVyc29ufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" height="50px" width="50px" style="border-radius: 50%;"/></div>
+                <div><small>Hassan busniss 300000 sek</small></div>
+                <div><small class="font-weight-light">Hassan busniss</small></div>
+              </div>
+              <div class="d-flex flex-column justify-content-betwen text-right">
+              <div><i class="fas fa-trash" style="color:#2c9bf3 ;"></i></div>
+              <div style="margin-top: 120px;"><small class="text-secondary ">sun march 2021 18.09pm</small></div>
+            </div>
+            </div>
+            <div class="shadow rounded d-flex flex-row justify-content-between p-3 mb-5" style="width: 230px;height: 230px;background-color: #EFF9FF;">
+              <div class="d-flex flex-column justify-content-between">
+              <div data-toggle="tooltip"
+              data-placement="left" title="* Edited by Sarah moil : 5-9-2021 (add new content person sam Davidson."><img src="https://images.unsplash.com/photo-1554151228-14d9def656e4?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8cGVyc29ufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" height="50px" width="50px" style="border-radius: 50%;"/></div>
+                <div><small>Hassan busniss 300000 sek</small></div>
+                <div><small class="font-weight-light">Hassan busniss</small></div>
+              </div>
+              <div class="d-flex flex-column justify-content-betwen text-right">
+              <div><i class="fas fa-trash" style="color:#2c9bf3 ;"></i></div>
+              <div style="margin-top: 120px;"><small class="text-secondary ">sun march 2021 18.09pm</small></div>
+            </div>
+            </div>
+            <div class="shadow rounded d-flex flex-row justify-content-between p-3 mb-5" style="width: 230px;height: 230px;background-color: #EFF9FF;">
+              <div class="d-flex flex-column justify-content-between">
+              <div data-toggle="tooltip"
+              data-placement="left" title="* Edited by Sarah moil : 5-9-2021 (add new content person sam Davidson."><img src="https://images.unsplash.com/photo-1554151228-14d9def656e4?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8cGVyc29ufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" height="50px" width="50px" style="border-radius: 50%;"/></div>
+                <div><small>Hassan busniss 300000 sek</small></div>
+                <div><small class="font-weight-light">Hassan busniss</small></div>
+              </div>
+              <div class="d-flex flex-column justify-content-betwen text-right">
+              <div><i class="fas fa-trash" style="color:#2c9bf3 ;"></i></div>
+              <div style="margin-top: 120px;"><small class="text-secondary ">sun march 2021 18.09pm</small></div>
+            </div>
+            </div>
+          </div>
+          <div class="d-flex flex-row justify-content-between flex-wrap w-100">
+            <div class="shadow rounded d-flex flex-row justify-content-between p-3 mb-5" style="width: 230px;height: 230px;background-color: #EFF9FF;">
+              <div class="d-flex flex-column justify-content-between">
+              <div data-toggle="tooltip"
+              data-placement="left" title="* Edited by Sarah moil : 5-9-2021 (add new content person sam Davidson."><img src="https://images.unsplash.com/photo-1554151228-14d9def656e4?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8cGVyc29ufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" height="50px" width="50px" style="border-radius: 50%;"/></div>
+                <div><small>Hassan busniss 300000 sek</small></div>
+                <div><small class="font-weight-light">Hassan busniss</small></div>
+              </div>
+              <div class="d-flex flex-column justify-content-betwen text-right">
+              <div><i class="fas fa-trash" style="color:#2c9bf3 ;"></i></div>
+              <div style="margin-top: 120px;"><small class="text-secondary ">sun march 2021 18.09pm</small></div>
+            </div>
+            </div>
+            <div class="shadow rounded d-flex flex-row justify-content-between p-3 mb-5" style="width: 230px;height: 230px;background-color: #EFF9FF;">
+              <div class="d-flex flex-column justify-content-between">
+              <div data-toggle="tooltip"
+              data-placement="left" title="* Edited by Sarah moil : 5-9-2021 (add new content person sam Davidson."><img src="https://images.unsplash.com/photo-1554151228-14d9def656e4?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8cGVyc29ufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" height="50px" width="50px" style="border-radius: 50%;"/></div>
+                <div><small>Hassan busniss 300000 sek</small></div>
+                <div><small class="font-weight-light">Hassan busniss</small></div>
+              </div>
+              <div class="d-flex flex-column justify-content-betwen text-right">
+              <div><i class="fas fa-trash" style="color:#2c9bf3 ;"></i></div>
+              <div style="margin-top: 120px;"><small class="text-secondary ">sun march 2021 18.09pm</small></div>
+            </div>
+            </div>
+            <div class="shadow rounded d-flex flex-row justify-content-between p-3 mb-5" style="width: 230px;height: 230px;background-color: #EFF9FF;">
+              <div class="d-flex flex-column justify-content-between">
+              <div data-toggle="tooltip"
+              data-placement="left" title="* Edited by Sarah moil : 5-9-2021 (add new content person sam Davidson."><img src="https://images.unsplash.com/photo-1554151228-14d9def656e4?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8cGVyc29ufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" height="50px" width="50px" style="border-radius: 50%;"/></div>
+                <div><small>Hassan busniss 300000 sek</small></div>
+                <div><small class="font-weight-light">Hassan busniss</small></div>
+              </div>
+              <div class="d-flex flex-column justify-content-betwen text-right">
+              <div><i class="fas fa-trash" style="color:#2c9bf3 ;"></i></div>
+              <div style="margin-top: 120px;"><small class="text-secondary ">sun march 2021 18.09pm</small></div>
+            </div>
+            </div>
+            <div class="shadow rounded d-flex flex-row justify-content-between p-3 mb-5" style="width: 230px;height: 230px;background-color: #EFF9FF;">
+              <div class="d-flex flex-column justify-content-between">
+              <div data-toggle="tooltip"
+              data-placement="left" title="* Edited by Sarah moil : 5-9-2021 (add new content person sam Davidson."><img src="https://images.unsplash.com/photo-1554151228-14d9def656e4?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8cGVyc29ufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" height="50px" width="50px" style="border-radius: 50%;"/></div>
+                <div><small>Hassan busniss 300000 sek</small></div>
+                <div><small class="font-weight-light">Hassan busniss</small></div>
+              </div>
+              <div class="d-flex flex-column justify-content-betwen text-right">
+              <div><i class="fas fa-trash" style="color:#2c9bf3 ;"></i></div>
+              <div style="margin-top: 120px;"><small class="text-secondary ">sun march 2021 18.09pm</small></div>
+            </div>
+            </div>
+            <div class="shadow rounded d-flex flex-row justify-content-between p-3 mb-5" style="width: 230px;height: 230px;background-color: #EFF9FF;">
+              <div class="d-flex flex-column justify-content-between">
+              <div data-toggle="tooltip"
+              data-placement="left" title="* Edited by Sarah moil : 5-9-2021 (add new content person sam Davidson."><img src="https://images.unsplash.com/photo-1554151228-14d9def656e4?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8cGVyc29ufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" height="50px" width="50px" style="border-radius: 50%;"/></div>
+                <div><small>Hassan busniss 300000 sek</small></div>
+                <div><small class="font-weight-light">Hassan busniss</small></div>
+              </div>
+              <div class="d-flex flex-column justify-content-betwen text-right">
+              <div><i class="fas fa-trash" style="color:#2c9bf3 ;"></i></div>
+              <div style="margin-top: 120px;"><small class="text-secondary ">sun march 2021 18.09pm</small></div>
+            </div>
+            </div>
+          </div>
+          <div class="d-flex flex-row justify-content-between flex-wrap w-100">
+            <div class="shadow rounded d-flex flex-row justify-content-between p-3 mb-5" style="width: 230px;height: 230px;background-color: #EFF9FF;">
+              <div class="d-flex flex-column justify-content-between">
+              <div data-toggle="tooltip"
+              data-placement="left" title="* Edited by Sarah moil : 5-9-2021 (add new content person sam Davidson."><img src="https://images.unsplash.com/photo-1554151228-14d9def656e4?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8cGVyc29ufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" height="50px" width="50px" style="border-radius: 50%;"/></div>
+                <div><small>Hassan busniss 300000 sek</small></div>
+                <div><small class="font-weight-light">Hassan busniss</small></div>
+              </div>
+              <div class="d-flex flex-column justify-content-betwen text-right">
+              <div><i class="fas fa-trash" style="color:#2c9bf3 ;"></i></div>
+              <div style="margin-top: 120px;"><small class="text-secondary ">sun march 2021 18.09pm</small></div>
+            </div>
+            </div>
+            <div class="shadow rounded d-flex flex-row justify-content-between p-3 mb-5" style="width: 230px;height: 230px;background-color: #EFF9FF;">
+              <div class="d-flex flex-column justify-content-between">
+              <div data-toggle="tooltip"
+              data-placement="left" title="* Edited by Sarah moil : 5-9-2021 (add new content person sam Davidson."><img src="https://images.unsplash.com/photo-1554151228-14d9def656e4?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8cGVyc29ufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" height="50px" width="50px" style="border-radius: 50%;"/></div>
+                <div><small>Hassan busniss 300000 sek</small></div>
+                <div><small class="font-weight-light">Hassan busniss</small></div>
+              </div>
+              <div class="d-flex flex-column justify-content-betwen text-right">
+              <div><i class="fas fa-trash" style="color:#2c9bf3 ;"></i></div>
+              <div style="margin-top: 120px;"><small class="text-secondary ">sun march 2021 18.09pm</small></div>
+            </div>
+            </div>
+            <div class="shadow rounded d-flex flex-row justify-content-between p-3 mb-5" style="width: 230px;height: 230px;background-color: #EFF9FF;">
+              <div class="d-flex flex-column justify-content-between">
+              <div data-toggle="tooltip"
+              data-placement="left" title="* Edited by Sarah moil : 5-9-2021 (add new content person sam Davidson."><img src="https://images.unsplash.com/photo-1554151228-14d9def656e4?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8cGVyc29ufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" height="50px" width="50px" style="border-radius: 50%;"/></div>
+                <div><small>Hassan busniss 300000 sek</small></div>
+                <div><small class="font-weight-light">Hassan busniss</small></div>
+              </div>
+              <div class="d-flex flex-column justify-content-betwen text-right">
+              <div><i class="fas fa-trash" style="color:#2c9bf3 ;"></i></div>
+              <div style="margin-top: 120px;"><small class="text-secondary ">sun march 2021 18.09pm</small></div>
+            </div>
+            </div>
+            <div class="shadow rounded d-flex flex-row justify-content-between p-3 mb-5" style="width: 230px;height: 230px;background-color: #EFF9FF;">
+              <div class="d-flex flex-column justify-content-between">
+              <div data-toggle="tooltip"
+              data-placement="left" title="* Edited by Sarah moil : 5-9-2021 (add new content person sam Davidson."><img src="https://images.unsplash.com/photo-1554151228-14d9def656e4?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8cGVyc29ufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" height="50px" width="50px" style="border-radius: 50%;"/></div>
+                <div><small>Hassan busniss 300000 sek</small></div>
+                <div><small class="font-weight-light">Hassan busniss</small></div>
+              </div>
+              <div class="d-flex flex-column justify-content-betwen text-right">
+              <div><i class="fas fa-trash" style="color:#2c9bf3 ;"></i></div>
+              <div style="margin-top: 120px;"><small class="text-secondary ">sun march 2021 18.09pm</small></div>
+            </div>
+            </div>
+            <div class="shadow rounded d-flex flex-row justify-content-between p-3 mb-5" style="width: 230px;height: 230px;background-color: #EFF9FF;">
+              <div class="d-flex flex-column justify-content-between">
+              <div data-toggle="tooltip"
+              data-placement="left" title="* Edited by Andre jim : 5-9-2021 (customer name changed from invest Itd to investment international ."><img src="https://images.unsplash.com/photo-1554151228-14d9def656e4?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8cGVyc29ufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" height="50px" width="50px" style="border-radius: 50%;"/></div>
+                <div><small>Hassan busniss 300000 sek</small></div>
+                <div><small class="font-weight-light">Hassan busniss</small></div>
+              </div>
+              <div class="d-flex flex-column justify-content-betwen text-right">
+              <div><i class="fas fa-trash" style="color:#2c9bf3 ;"></i></div>
+              <div style="margin-top: 120px;"><small class="text-secondary ">sun march 2021 18.09pm</small></div>
+            </div>
+            </div>
+          </div>
+        </div>
+        <!-- sales dashboard ended here -->
+        <!-- offers tab started here -->
+        <div class="content3 container rounded mt-3">
+          <ul class="nav nav-tabs">
+            <li class="nav-item">
+              <a class="nav-link active" href="#!">Active</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#!">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#!">Link</a>
+            </li>
+          </ul>
+        </div>
+        <!-- offers tab ended here -->
+        <div class="content4 container rounded mt-3">Activites</div>
+        <div class="content5 container rounded mt-3">To Do</div>
+        <div class="content6 container rounded mt-3">Tickets</div>
+        <div class="content7 container rounded mt-3">Signage</div>
+        <div class="content8 container rounded mt-3">Billing sammury</div>
+      
+      <!-- notification started here -->
+      <div class="notifcation shadow">
+        <small class="text-left" style="cursor: pointer;">Notification</small>
+        <small class="text-right ml-5" style="cursor: pointer;">Clear all</small>
+        <div class="d-flex flex-column mt-3">
+          <div class="notif"><div class="d-flex flex-row"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGVyc29ufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" height="50px" width="50px" alt="personal photo"/> <small>Cristena Brid</small></div><p class="text-secondary" style="font-size: 11px;">Hi how are you?How about your next meeting??</p></div>
+          <div class="notif"><div class="d-flex flex-row"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGVyc29ufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" height="50px" width="50px" alt="personal photo"/> <small>Cristena Brid</small></div><p class="text-secondary" style="font-size: 11px;">Hi how are you?How about your next meeting??</p></div>
+          <div class="notif"><div class="d-flex flex-row"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGVyc29ufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" height="50px" width="50px" alt="personal photo"/> <small>Cristena Brid</small></div><p class="text-secondary" style="font-size: 11px;">Hi how are you?How about your next meeting??</p></div>
+         <div class="text-center"><a class="text-info" style="cursor: pointer;">view all <i class="fas fa-arrow-right mr-2"></i></a></div>
+        </div>
+      </div>
+      <!-- notification ended here -->
+      <!-- languages part started here -->
+      <div class="languages shadow">
+       <div class="d-flex flex-column justify-content-between">
+         <div class="d-flex flex-row justify-content-between"><small>English </small><img class="mt-2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/280px-Flag_of_the_United_States.svg.png" height="20px" width="40px"/></div>
+         <div class="d-flex flex-row justify-content-between"><small>SWD </small><img class="mt-2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Flag_of_Sweden.svg/560px-Flag_of_Sweden.svg.png" height="20px" width="40px"/></div>
+
+       </div>
+      </div>
+      <!-- languages part ended here -->
+        <!-- setting part started here -->
+        <div class="setting shadow">
+          <div class="d-flex flex-column justify-content-between ">
+            <a href="#">Settings</a>
+            <small class="mt-2" style="border-top: 1px solid  #e8e8e8;"><span class="shadow"><i class="fas fa-cog"></i></span> User setting</small>
+            <small class="mt-2"><span class="shadow"><i class="fas fa-cog"></i></span> Rooms</small>
+            <small class="mt-2"><span class="shadow"><i class="fas fa-cog"></i></span> Articles</small>
+            <small class="mt-2"><span class="shadow"><i class="fas fa-cog"></i></span> inventory list</small>
+            <small class="mt-2"><span class="shadow"><i class="fas fa-cog"></i></span> suppliers</small>
+            <small class="mt-2"><span class="shadow"><i class="fas fa-cog"></i></span> Budget</small>
+            <small class="mt-2"><span class="shadow"><i class="fas fa-cog"></i></span> Buildings</small>
+            <small class="mt-2"><span class="shadow"><i class="fas fa-cog"></i></span> Other setting</small>
+          </div>
+        </div>
+        <!-- setting part ended here -->
+      <!-- profile part started here -->
+      <div class="profile shadow">
+        <div class="d-flex flex-column justify-content-between">
+         <div class="d-flex flex-row justify-content-between"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGVyc29ufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" height="50px" width="50px" style="border-radius: 50%;"/><small class="text-dark mt-3">jamees</small></div>
+         <div class="d-flex flex-row justify-content-between mt-2"><small class="text-secondary"> Profile</small><i class="far fa-user"></i></div>
+         <div class="d-flex flex-row justify-content-between mt-2"><small class="text-secondary"> Inbox</small><i class="far fa-comment"></i></div>
+         <div class="d-flex flex-row justify-content-between mt-2"><small class="text-secondary"> setting</small><i class="fas fa-cog"></i></div>
+         <div class="d-flex flex-row justify-content-between mt-2"><small class="text-secondary"> Log out</small><i class="fas fa-sign-out-alt"></i></div>
+        </div>
+      </div>
+      <!-- profile part ended here -->
+    
+       
+     
+    </div>
+     <!-- sidebar -->
+     <div class="sidebar">
+      <div class="d-flex flex-column">
+        <a href="#" class=" text-decoration-none" id="closeside" style="color: #7466f0;"><i class="fas fa-bars"></i></a>
+        <div class="d-flex flex-row justify-content-between py-3">
+        <a href="#" class="text-dark text-decoration-none">space mangenemnt</a>
+        <i class="fas fa-tasks"></i>
+      </div>
+      <div class="d-flex flex-row justify-content-between py-3">
+        <a href="#" class="text-dark text-decoration-none">confrence mangenemnt</a>
+        <i class="fas fa-tasks"></i>
+      </div>
+      <div class="d-flex flex-row justify-content-between py-3">
+        <a href="#" class="text-dark text-decoration-none">Tickets</a>
+        <i class="fas fa-tasks"></i>
+      </div>
+      <div class="d-flex flex-row justify-content-between py-3">
+        <a href="#" class="text-dark text-decoration-none">CRM</a>
+        <i class="fas fa-tasks"></i>
+      </div>
+      <div class="d-flex flex-row justify-content-between py-3">
+        <a href="#" class="text-dark text-decoration-none">Mass Email</a>
+        <i class="fas fa-tasks"></i>
+      </div>
+      </div>
+    </div>
+    <!-- sidebar ended here -->
+    <!-- bars started here-->
+    <div class="bars p-3" style="display: none;">
+      <div class="d-flex flex-column justify-content-between">
+        <div class="input-group" id="input-group2">
+          <div class="input-group-prepend">
+            <button class="btn text-secondary" type="button"><i class="fas fa-search"></i></button>
+          </div>
+          <input type="text" class="border-0 outline-0" placeholder="Search..." aria-label="" aria-describedby="basic-addon1">
+        </div>
+        <div class="tabs2 d-flex flex-row justify-content-between">
+          <a href="#" class="text-decoration-none" id="friends">Friends</a>
+          <a href="#" class="text-decoration-none" id="others">Other</a>
+          <a href="#" class="text-decoration-none" id="active">Active</a>
+        </div>
+        <div class="friends mt-2">
+          <div class="d-flex flex-row justify-content-between pb-2" style="border-bottom: 1px solid #e8e8e8;">
+            <img height="50px" width="50px" style="border-radius: 50%;" src="https://images.unsplash.com/photo-1592124549776-a7f0cc973b24?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGh1bWFufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"/>
+           <small class="mt-3">Arwa Gouda</small>
+           <i class="far fa-comment-alt text-info mt-3"></i>
+           <i class="fas fa-phone-alt text-success mt-3"></i>
+          </div>
+          <div class="d-flex flex-row justify-content-between py-2" style="border-bottom: 1px solid #e8e8e8;">
+            <img height="50px" width="50px" style="border-radius: 50%;" src="https://images.unsplash.com/photo-1592124549776-a7f0cc973b24?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGh1bWFufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"/>
+           <small class="mt-3">Arwa Gouda</small>
+           <i class="far fa-comment-alt text-info mt-3"></i>
+           <i class="fas fa-phone-alt text-success mt-3"></i>
+          </div>
+          <div class="d-flex flex-row justify-content-between py-2" style="border-bottom: 1px solid #e8e8e8;">
+            <img height="50px" width="50px" style="border-radius: 50%;" src="https://images.unsplash.com/photo-1592124549776-a7f0cc973b24?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGh1bWFufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"/>
+           <small class="mt-3">Arwa Gouda</small>
+           <i class="far fa-comment-alt text-info mt-3"></i>
+           <i class="fas fa-phone-alt text-success mt-3"></i>
+          </div>
+          <div class="d-flex flex-row justify-content-between py-2" style="border-bottom: 1px solid #e8e8e8;">
+            <img height="50px" width="50px" style="border-radius: 50%;" src="https://images.unsplash.com/photo-1592124549776-a7f0cc973b24?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGh1bWFufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"/>
+           <small class="mt-3">Arwa Gouda</small>
+           <i class="far fa-comment-alt text-info mt-3"></i>
+           <i class="fas fa-phone-alt text-success mt-3"></i>
+          </div>
+          <div class="d-flex flex-row justify-content-between py-2" style="border-bottom: 1px solid #e8e8e8;">
+            <img height="50px" width="50px" style="border-radius: 50%;" src="https://images.unsplash.com/photo-1592124549776-a7f0cc973b24?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGh1bWFufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"/>
+           <small class="mt-3">Arwa Gouda</small>
+           <i class="far fa-comment-alt text-info mt-3"></i>
+           <i class="fas fa-phone-alt text-success mt-3"></i>
+          </div>
+          <div class="d-flex flex-row justify-content-between py-2" style="border-bottom: 1px solid #e8e8e8;">
+            <img height="50px" width="50px" style="border-radius: 50%;" src="https://images.unsplash.com/photo-1592124549776-a7f0cc973b24?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGh1bWFufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"/>
+           <small class="mt-3">Arwa Gouda</small>
+           <i class="far fa-comment-alt text-info mt-3"></i>
+           <i class="fas fa-phone-alt text-success mt-3"></i>
+          </div>
+        </div>
+        <div class="Others mt-2" style="display: none;">
+          <div class="d-flex flex-row justify-content-between pb-2" style="border-bottom: 1px solid #e8e8e8;">
+            <img height="50px" width="50px" style="border-radius: 50%;" src="https://images.unsplash.com/photo-1592124549776-a7f0cc973b24?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGh1bWFufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"/>
+           <small class="mt-3">Arwa Gouda</small>
+           <i class="far fa-comment-alt text-info mt-3"></i>
+           <i class="fas fa-phone-alt text-success mt-3"></i>
+          </div>
+          <div class="d-flex flex-row justify-content-between py-2" style="border-bottom: 1px solid #e8e8e8;">
+            <img height="50px" width="50px" style="border-radius: 50%;" src="https://images.unsplash.com/photo-1592124549776-a7f0cc973b24?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGh1bWFufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"/>
+           <small class="mt-3">Arwa Gouda</small>
+           <i class="far fa-comment-alt text-info mt-3"></i>
+           <i class="fas fa-phone-alt text-success mt-3"></i>
+          </div>
+        </div>
+        <div class="Activess mt-2" style="display: none;">
+          <div class="d-flex flex-row justify-content-between pb-2" style="border-bottom: 1px solid #e8e8e8;">
+            <img height="50px" width="50px" style="border-radius: 50%;" src="https://images.unsplash.com/photo-1592124549776-a7f0cc973b24?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGh1bWFufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"/>
+           <small class="mt-3">Arwa Gouda</small>
+           <i class="far fa-comment-alt text-info mt-3"></i>
+           <i class="fas fa-phone-alt text-success mt-3"></i>
+          </div>
+          <div class="d-flex flex-row justify-content-between py-2" style="border-bottom: 1px solid #e8e8e8;">
+            <img height="50px" width="50px" style="border-radius: 50%;" src="https://images.unsplash.com/photo-1592124549776-a7f0cc973b24?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGh1bWFufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"/>
+           <small class="mt-3">Arwa Gouda</small>
+           <i class="far fa-comment-alt text-info mt-3"></i>
+           <i class="fas fa-phone-alt text-success mt-3"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- bars ended here -->
+    </main>
+      <!-- main content ended here -->
+      <!-- footer started here -->
+      <footer class="mt-5">
+        <div class="container">
+          <div class="d-flex flex-row justify-content-between">
+            <div class="d-flex flex-column justify-content-between">
+              <h6 class="text-dark font-weight-bold">Categories</h6>
+              <small class="text-secondary">All courses</small>
+              <small class="text-secondary">Web Development</small>
+              <small class="text-secondary">UI UX</small>
+              <small class="text-secondary">Motion Graphic</small>
+              <small class="text-secondary">Python</small>
+            </div>
+            <div class="d-flex flex-column justify-content-between">
+              <h6 class="text-dark font-weight-bold">Community</h6>
+              <small class="text-dark">service</small>
+              <small class="text-dark">Profile</small>
+              <small class="text-dark">training</small>
+              <small class="text-dark">Resources</small>
+            </div>
+            <div class="d-flex flex-column justify-content-between">
+              <h6 class="text-dark font-weight-bold">Reservation</h6>
+              <small class="text-dark">service</small>
+              <small class="text-dark">Profile</small>
+              <small class="text-dark">training</small>
+              <small class="text-dark">Resources</small>
+            </div>
+            <div class="d-flex flex-column justify-content-between">
+              <h6 class="text-dark font-weight-bold">Support</h6>
+              <small class="text-dark">Guides</small>
+              <small class="text-dark">service</small>
+              <h6 class="text-dark font-weight-bold">Follw Us on</h6>
+              <p class="d-flex flex-row justify-content-between text-secondary"><i class="fab fa-facebook-f"></i><i class="fab fa-instagram"></i><i class="fab fa-youtube"></i></p>
+              
+            </div>
+          </div>
+          <div class="d-flex flex-row justify-content-between mt-3 mb-3" style="border-top: 1px solid #e8e8e8;">
+            <a class="navbar-brand mr-auto text-dark" href="#"><span>H</span>ighnous</a>
+            <p class="text-secondary">copy right <i class="far fa-copyright"></i> 2021</p>
+          </div>
+        </div>
+      </footer>
+      <!-- footer ended here -->
+        <script src="js/jquery-3.4.1.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/wow.min.js"></script>
+        <script src="js/main.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js" integrity="sha512-Wt1bJGtlnMtGP0dqNFH1xlkLBNpEodaiQ8ZN5JLA5wpc1sUlk/O5uuOMNgvzddzkpvZ9GLyYNa8w2s7rqiTk5Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>new WOW().init();
+        var chart = c3.generate({
+bindto: '#chart',
+data: {
+columns: [
+['data1', 30, 200, 100, 400, 150, 250],
+['data2', 50, 20, 10, 40, 15, 25]
+],
+axes: {
+data2: 'y2' // ADD
+}
+},
+axis: {
+y2: {
+show: true // ADD
+}
+}
+});
+var ctx = document.getElementById('myChart').getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        datasets: [{
+            label: '# of Votes',
+            data: [12, 19, 3, 5, 2, 3],
+            backgroundColor: [
+                '#7466f0',
+                '#7466f0',
+                '#7466f0',
+                '#7466f0',
+                '#7466f0',
+                '#7466f0'
+            ],
+            borderColor: [
+                '#7466f0',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+// var chart = c3.generate({
+// bindto: '#mychart',
+// data: {
+// columns: [
+// ['data1',  200, 100, 300, 150, 250,30],
+// ['data2',  10, 40, 15 ,50, 20, 25]
+// ],
+// axes: {
+// data2: 'y2'
+// },
+// types: {
+// data2: 'bar'
+// }
+// },
+// axis: {
+// y: {
+// label: {
+// text: 'Y Label',
+// position: 'outer-middle'
+// },
+// tick: {
+// format: d3.format("$,") // ADD
+// }
+// },
+// y2: {
+// show: true,
+// label: {
+// text: 'Y2 Label',
+// position: 'outer-middle'
+// }
+// }
+// }
+// });
+Number.prototype.format = function(n) {
+var r = new RegExp('\\d(?=(\\d{3})+' + (n > 0 ? '\\.' : '$') + ')', 'g');
+return this.toFixed(Math.max(0, Math.floor(n))).replace(r, '$&,');
+};
+
+$('.count').each(function () {
+$(this).prop('counter', 0).animate({
+counter: $(this).text()
+}, {
+duration: 10000,
+easing: 'easeOutExpo',
+step: function (step) {
+  $(this).text('' + step.format());
+}
+});
+});
+
+        </script>
+    </body>
+</html>
